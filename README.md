@@ -1,4 +1,4 @@
-# gitlabrunner-healthcheck
+# gitlabrunner-healthcheck [![Build Status](https://drone.app.cloud.dotscience.net/api/badges/dotmesh-io/gitlabrunner-healthcheck/status.svg)](https://drone.app.cloud.dotscience.net/dotmesh-io/gitlabrunner-healthcheck)
 
 Made this script which will ping alertmanager any time a runner spends too long not contacting gitlab-ci.
 
