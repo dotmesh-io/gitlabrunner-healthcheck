@@ -90,7 +90,9 @@ func CheckAllRunners(gitlabURL, token, alertmanagerUsername, alertmanagerPasswor
 				// handle err
 				log.WithField("url", alertmanagerApiUrl).WithError(err).Error("Could not create http request")
 			}
-			req.SetBasicAuth(alertmanagerUsername, alertmanagerPassword)
+			if alertmanagerUsername != "" && alertmanagerPassword != "" {
+				req.SetBasicAuth(alertmanagerUsername, alertmanagerPassword)
+			}
 			req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 
 			resp, err := http.DefaultClient.Do(req)
