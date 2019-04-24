@@ -19,7 +19,7 @@ steps:
   when:
     status: [ success, failure ]
   settings:
-    webhook: 
+    webhook:
       from_secret: slack_webhook
     channel: ci
     username: drone
