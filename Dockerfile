@@ -1,4 +1,4 @@
-FROM golang:1.12.0 AS build-env
+FROM golang:1.13.1 AS build-env
 WORKDIR /usr/local/go/src/github.com/dotmesh-io/gitlab-runner-mon
 COPY . /usr/local/go/src/github.com/dotmesh-io/gitlab-runner-mon
 RUN make install
